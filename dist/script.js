@@ -559,12 +559,16 @@ function hmrAccept(bundle, id) {
 },{}],"6rimH":[function(require,module,exports) {
 const name_field = document.querySelector("#name");
 const phn_field = document.querySelector("#phone");
-const wedding_date_field = document.querySelector("#weddig_date");
+const wedding_date_field = document.querySelectorAll("#weddig_date");
+const wedding_date_field_arr = Array.from(wedding_date_field);
 const name_err = document.querySelector("#name_err");
 const phn_err = document.querySelector("#phn_err");
-const source_field = document.querySelector("#source");
+const source_field = document.querySelectorAll("#source");
+const source_field_arr = Array.from(source_field);
 const submit_btn = document.querySelector("#submit_btn");
-source_field.value = document.URL;
+source_field_arr.forEach(function(el) {
+    el.value = document.URL;
+});
 name_field.addEventListener("input", ()=>{
     name_err.style.display = "none";
 });
@@ -585,8 +589,10 @@ submit_btn.addEventListener("click", (e)=>{
         phn_err.innerHTML = "Please enter a valid number";
     }
 });
-wedding_date_field.addEventListener("focus", ()=>{
-    wedding_date_field.type = "date";
+wedding_date_field_arr.forEach(function(el) {
+    el.addEventListener("focus", ()=>{
+        el.type = "date";
+    });
 });
 const now = new Date().toLocaleString("en-US", {
     timeZone: "Asia/Kolkata"
