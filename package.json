@@ -1,0 +1,23 @@
+{
+  "name": "@no_code_js/wedding_planner_page",
+  "version": "1.0.0",
+  "description": "JS used in the form of this page",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akash457353564/wedding_planner_page.git"
+  },
+  "author": "Aksh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akash457353564/wedding_planner_page/issues"
+  },
+  "homepage": "https://github.com/akash457353564/wedding_planner_page#readme",
+  "dependencies": {
+    "parcel": "^2.8.3"
+  }
+}
